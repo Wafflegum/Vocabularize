@@ -1,0 +1,10 @@
+.meaning {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.definitions {
+    display: flex;
+    flex-direction: column;
+}
