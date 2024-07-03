@@ -2,9 +2,13 @@ body,
 html {
     margin: 0;
     padding: 0;
+
+    color: rgba(0, 0, 0, 0.8);
+    background: rgb(237, 250, 255);
 }
 
 main {
+    color: inherit;
     padding: 2em;
 
     display: flex;

@@ -3,10 +3,16 @@ import './ResultCard.css'
 
 const ResultCard = ({ wordData }) => {
   return (
-    <main>
-        <div className="title">
-            {wordData.word}
+    <card>
+        <div className="header">
+            <div className="title">
+                {wordData.word}
+            </div>
+            <div className="phonetics">
+                {wordData.phonetic}
+            </div>
         </div>
+
         <div className="meaning">
             {wordData.meanings.map((def) => {
 
@@ -22,7 +28,7 @@ const ResultCard = ({ wordData }) => {
             })}
             
         </div>
-    </main>
+    </card>
   )
 }
 
