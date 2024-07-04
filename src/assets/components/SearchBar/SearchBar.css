@@ -2,6 +2,8 @@ form {
     height: fit-content;
     border-radius: 1em;
 
+    outline: 0.2vh solid rgb(247, 247, 247);
+
     padding: 0.5em;
     margin-bottom: -1vh;
 
@@ -16,7 +18,7 @@ form {
 }
 
 form:focus-within {
-    outline: 0.2vh solid gray;
+    outline: 0.2vh solid rgb(228, 228, 228);
 }
 
 .searchBar {
