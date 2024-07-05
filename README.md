@@ -8,5 +8,5 @@ I learned how to make a dark mode and style the dark mode button. I was planning
 
 ## Screenshots
 
-![Desktop](website%20preview/Desktop.png)
-![Mobile](website%20preview/Mobile.png)
+<img src="website%20preview/Desktop.png" height="400" />
+<img src="website%20preview/Mobile.png" height="400" />

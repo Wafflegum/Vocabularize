@@ -49,7 +49,7 @@ function App() {
         : 
           <ResultCard/>
       }
-      
+
       <div className="footer">
         <label>
           <input type="checkbox" id='themeToggle' onChange={ToggleTheme}/>
