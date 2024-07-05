@@ -3,26 +3,40 @@ import useSound from 'use-sound';
 
 import './ResultCard.css'
 
-const ResultCard = ({ wordData }) => {
-    const [playSound] = useSound(wordData.phonetics[wordData.phonetics.length - 1].audio)
-    console.log(wordData.phonetics)
+const ResultCard = ({ word, phonetics, meanings, audio }) => {
+    const [playSound] = useSound(audio)
 
     return (
         <card>
+            {
+                word ? 
+                    ''
+                : 
+                    <>
+                        <h2 style={{textAlign: 'center'}}>Welcome to Vocabularize!</h2>
+                        <p style={{textAlign: 'center'}}>This is a simple dictionary created with react + dictionarydev.api.</p>
+                    </>
+            }
             <div className="header">
                 <div className="title">
-                    {wordData.word}
+                    {word}
                 </div>
                 <div className="phonetics">
-                    {wordData.phonetic}
+                    {phonetics ? phonetics : ''}
                 </div>
-                <div className="pronunciation" onClick={playSound}>
-                    <img src="https://img.icons8.com/?size=100&id=2795&format=png&color=000000" alt="play audio"  />
-                </div>
+                {
+                    audio ? 
+                        <div className="pronunciation" onClick={audio ? playSound : null}>
+                            <img src="https://img.icons8.com/?size=100&id=2795&format=png&color=000000" alt="play audio"  />
+                        </div>
+                     : ''
+
+                }
+                
             </div>
 
             <div className="meaning">
-                {wordData.meanings.map((def) => {
+                {meanings?.map((def) => {
 
                     return (
                         <div className="definitions" key={def.id}> 

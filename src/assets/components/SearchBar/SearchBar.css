@@ -1,28 +1,40 @@
+:root {
+    --outline: rgba(235, 235, 235, 0.747);
+    --focused-outline: rgb(228, 228, 228);
+}
+
+[theme='dark'] {
+    --outline: rgba(26, 36, 46, 0.247);
+    --focused-outline: rgba(26, 36, 46, 0.8);
+}
+
 form {
-    height: fit-content;
+    height: 3em;
     border-radius: 1em;
 
-    outline: 0.2vh solid rgb(247, 247, 247);
+    outline: 0.2vh solid var(--outline);
 
-    padding: 0.5em;
-    margin-bottom: -1vh;
+    padding: 0.8em;
+    box-sizing: border-box;
+
+    margin-bottom: -5vh;
 
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 
-    background: white;
+    background: var(--card-bg);
 
     z-index: 11;
 }
 
 form:focus-within {
-    outline: 0.2vh solid rgb(228, 228, 228);
+    outline: 0.2vh solid var(--focused-outline);
 }
 
 .searchBar {
-    width: 20em;
+    width: 30em;
     height: 100%;
 
     border: 0;
@@ -30,6 +42,9 @@ form:focus-within {
 
     color: inherit;
     background: none;
+
+    font-size: inherit;
+    font-family: inherit;
 }
 
 .searchBtn {
@@ -44,4 +59,12 @@ form:focus-within {
 
 .searchBtn img {
     height: 1.5em;
+}
+
+/* Mobile breakpoint */
+@media only screen and (max-width: 600px) {
+    form {
+        width: 90%;
+        margin-bottom: 0;
+    }
 }
