@@ -97,3 +97,7 @@ label img {
     gap: 2em;
     bottom: 0;
 }
+
+.footer span {
+    text-align: center;
+}
